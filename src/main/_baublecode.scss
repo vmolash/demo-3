@@ -1,7 +1,5 @@
-html::after {
+%background {
     content: "";
-    background: url(../images/bg-home.jpg
-    ) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -13,7 +11,18 @@ html::after {
     position: absolute;
     z-index: -1;
 }
-
+#home::after {
+    @extend %background;
+    background: url(../images/bg-home.jpg) no-repeat center center fixed;
+}
+#shop::after {
+    @extend %background;
+    background: url(../images/bg-shop.jpg) no-repeat center top fixed;
+}
+.nav-active {
+    color: $heading-color;
+    background-color: rgba(255,255,255, .3);
+}
 .container {
     max-width: 960px;
     margin: 0 auto;
@@ -36,7 +45,7 @@ html::after {
     }
 }
 .brand-subname {
-    margin: -6rem 3.75rem 2rem 0;
+    margin: -6rem 3.75rem 6rem 0;
     span {
         color: $body-background;
         font-weight: 400;
@@ -45,6 +54,35 @@ html::after {
     img {
         width: 3.2rem;
     }
+}
+#shop {
+    .brand-subname img {
+        margin-right: 27rem;
+    }
+    .products img {
+        width: 160px;
+    }
+    i {
+        position: relative;
+        right: 21px;
+        top: 97px;
+    }
+}
+#shop .products {
+    display: grid;
+    grid-gap: 2rem;
+    justify-items: center;
+    margin: 3rem;
+    @include break(500px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include break(600px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include break(700px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
 }
 // footer
 footer {
