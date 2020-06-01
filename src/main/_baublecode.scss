@@ -60,12 +60,12 @@
         margin-right: 27rem;
     }
     .products img {
-        width: 160px;
+        width: 210px;
     }
     i {
         position: relative;
-        right: 21px;
-        top: 97px;
+        top: 5px;
+        right: 20px;
     }
 }
 #shop .products {
@@ -89,11 +89,11 @@ footer {
     background: url(../images/bg-footer.jpg) no-repeat left center;
     background-color: #826453;
     color: #fff;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    overflow: hidden;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        overflow: hidden;
     div {
         display: flex;
         justify-content: space-between;
