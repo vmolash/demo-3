@@ -5,11 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Demo-3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Patua+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     
- <h1>Hello</h1>
+    <div class="navBar">
+        <div class="container">
+            <input type="checkbox" id="toggleBar">
+            <label for="toggleBar">Menu</label>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#" class="nav-item">Home</a></li>
+                    <li><a href="" class="nav-item">About</a></li>
+                    <li><a href="" class="nav-item">Shop</a></li>
+                    <li><a href="" class="nav-item">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <main class="container">
+        <section class="brand-name">
+            <h1 class="uppercase t-right">sagebrush rebellion</h1>
+        </section>
+        <section class="brand-subname t-right">
+            <img src="images/herb.png" alt="herb" class="img-responsive" />
+            <span class="capitalize">handmade western jewelry</span>
+        </section>
+        <section class="slides">
+        <div class="slideshow">
+            <div class="mySlides fade">
+                <img src="images/sagebrushslideshow-sandoval-1000x765optimized.jpg" alt="sagebrush" />
+                <div class="text">“Sandoval,” $158</div>
+            </div>
+                
+            <div class="mySlides fade">
+                <img src="images/sagebrushslideshow-esmeralda-1000x765optimized.jpg" alt="sagebrush" />
+                <div class="text">“Esmeralda,” $128, coming soon</div>
+            </div>
+                    
+            <div class="mySlides fade">
+                <img src="images/sagebrushslideshow-sanmiguel-1000x765optimized.jpg" alt="sagebrush" />
+                <div class="text">“San Miguel,” $100</div>
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="images/sagebrushslideshow-riverrock-1000x765optimized.jpg" alt="sagebrush" />
+                <div class="text">“River Rock,” $75</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="images/sagebrushslideshow-mojave-1000x765optimized.jpg" alt="sagebrush" />
+                <div class="text">“Mojave,” $95, coming soon</div>
+            </div> 
+            <div class="mySlides fade">
+                <img src="images/sagebrushslideshow-socorro-1000x765optimized.jpg" alt="sagebrush" />
+                <div class="text">“Socorro,” $75</div>
+             </div>    
+             <div class="mySlides fade">
+                <img src="images/sagebrushslideshow-shaman-1000x765optimized.jpg" alt="sagebrush" />
+                <div class="text">“Shaman,” $235</div>
+            </div> 
+            <div class="mySlides fade">
+                <img src="images/sagebrushslideshow-luna-1000x765optimized.jpg" alt="sagebrush" />
+                <div class="text">“Luna,” $125</div>
+            </div> 
+            <div class="mySlides fade">
+                <img src="images/sagebrushslideshow-cochise-1000x765optimized.jpg" alt="sagebrush" />
+                <div class="text">“Cochise,” $125</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/sagebrushslideshow-guadalupe-1000x765optimized.jpg" alt="sagebrush" />
+                <div class="text">“Guadalupe,” $250</div>
+            </div>
+                
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>  
+        </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+                <p>Copyright 2020 - Sagebrush Rebellion</p>
+                <p class="icon">
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/pinterest.png"/></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png"/></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png"/></a>
+                </p>
+        </div>
+    </footer>
+    
 <script src="scripts/baublecode.js" type="text/javascript"></script>
 </body>
 </html>

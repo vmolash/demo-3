@@ -16,13 +16,90 @@ button, select, input, option {
   border: none;
 }
 
-body {
-  background-color: lightblue;
+html::after {
+  content: "";
+  background: url(../images/bg-home.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
-.footer {
-  background-color: #1c2336;
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.brand-name {
+  background: url(../images/bg-brand.jpg) no-repeat right center;
+  height: 100%;
+  margin-top: 3rem;
+}
+
+.brand-name h1 {
+  background: -webkit-linear-gradient(#eab582, #161906);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Patua One', cursive;
+  font-weight: 100;
+  font-size: 3.5rem;
+  margin-right: 6rem;
+  padding: 2rem;
+  letter-spacing: 7px;
+}
+
+.brand-subname {
+  margin: -6rem 3.75rem 2rem 0;
+}
+
+.brand-subname span {
+  color: #fefffa;
+  font-weight: 400;
+  font-size: 2.4rem;
+}
+
+.brand-subname img {
+  width: 3.2rem;
+}
+
+footer {
+  background: url(../images/bg-footer.jpg) no-repeat left center;
+  background-color: #826453;
   color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer p {
+  display: flex;
+  align-items: flex-end;
+  font-size: 2rem;
+  padding: 0;
+}
+
+footer .icon {
+  background-color: #af9c91;
+  padding: 0 .5rem;
+}
+
+footer .icon img {
+  position: relative;
+  top: 4px;
+  width: 25px;
 }
 
 html {
@@ -349,10 +426,6 @@ table {
 }
 
 /*! Nav Bar*/
-div.navBar {
-  background-color: #d4c9c5;
-}
-
 div.navBar input[type=checkbox] {
   position: absolute;
   display: none;
@@ -399,14 +472,9 @@ div.navBar nav {
   }
 }
 
-@media (min-width: 0) and (max-width: 499px) {
-  div.navBar nav ul .logo {
-    display: none;
-  }
-}
-
 div.navBar nav ul li {
   border-radius: 5px;
+  text-align: center;
 }
 
 div.navBar nav ul li a {
@@ -414,15 +482,11 @@ div.navBar nav ul li a {
 }
 
 div.navBar nav ul li a:hover {
-  color: #93d293;
+  color: #dadcc6;
 }
 
 div.navBar nav ul li a:active {
-  color: #93d293;
-}
-
-div.navBar nav ul li:hover:first-of-type {
-  background-color: transparent;
+  color: #dadcc6;
 }
 
 div.navBar nav ul li a {
@@ -435,10 +499,7 @@ div.navBar nav ul li a {
 @media (min-width: 500px) {
   div.navBar nav ul {
     display: flex;
-    justify-content: center;
-  }
-  div.navBar nav ul li:first-of-type {
-    margin-right: auto;
+    justify-content: space-around;
   }
   div.navBar nav ul li a {
     display: grid;
@@ -710,9 +771,33 @@ input, select, textarea {
 
 /* Slideshow container */
 .slideshow {
-  max-width: 1000px;
+  max-width: 350px;
   position: relative;
   margin: auto;
+  z-index: 4;
+}
+
+.slideshow::after {
+  content: "";
+  position: absolute;
+  opacity: 0.5;
+  top: 1.5rem;
+  width: 500px;
+  height: 240px;
+  z-index: -1;
+  background-color: #fff;
+}
+
+.slideshow::before {
+  content: "";
+  position: absolute;
+  opacity: 0.5;
+  top: 1.5rem;
+  right: 0;
+  width: 500px;
+  height: 240px;
+  z-index: -1;
+  background-color: #fff;
 }
 
 /* Next & previous buttons */

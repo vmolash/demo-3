@@ -1,6 +1,5 @@
 /*! Nav Bar*/
 div.navBar {
-    background-color: #d4c9c5;;
     input[type=checkbox] {
         position: absolute;
         display: none;
@@ -31,14 +30,10 @@ div.navBar {
             overflow: visible;
         }
         ul{
-            @include break(0, 499px) { .logo { display: none; } }
             li {
                 border-radius: 5px;
+                text-align: center;
                 @include linx($text-color, $heading-color, $heading-color);
-                &:hover {
-                    // background-color: transparentize(lighten($background-hover, 4%), .2); //bult-in function: color
-                    &:first-of-type { background-color: transparent; }
-                }
                 a { 
                     font-weight: bold;
                     display: block;
@@ -48,8 +43,7 @@ div.navBar {
             } 
             @include break(500px) {
                 display: flex;
-                justify-content: center;
-                li:first-of-type { margin-right: auto; }
+                justify-content: space-around;
                 li {
                     a {
                         display: grid;
