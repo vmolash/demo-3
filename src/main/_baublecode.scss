@@ -1,3 +1,6 @@
+html {
+    background-color: #b9a9a9;
+}
 %background {
     content: "";
     -webkit-background-size: cover;
@@ -13,11 +16,14 @@
 }
 #home::after {
     @extend %background;
-    background: url(../images/bg-home.jpg) no-repeat center center fixed;
+    @include break(500px) {
+        background: url(../images/bg-home.jpg) no-repeat center center fixed;
+    }
 }
 #shop::after {
     @extend %background;
-    background: url(../images/bg-shop.jpg) no-repeat center top fixed;
+    @include break(800px) {background: url(../images/bg-shop.jpg) no-repeat center top fixed;
+    }
 }
 .nav-active {
     color: $heading-color;
@@ -26,7 +32,6 @@
 .container {
     max-width: 960px;
     margin: 0 auto;
-
 }
 .brand-name {
     background: url(../images/bg-brand.jpg) no-repeat right center;
@@ -45,7 +50,7 @@
     }
 }
 .brand-subname {
-    margin: -6rem 3.75rem 6rem 0;
+    margin: -6rem 3.75rem 3rem 0;
     span {
         color: $body-background;
         font-weight: 400;
@@ -56,12 +61,8 @@
     }
 }
 #shop {
-    .brand-subname img {
-        margin-right: 27rem;
-    }
-    .products img {
-        width: 210px;
-    }
+    .brand-subname img { margin-right: 27rem; }
+    .products img { width: 210px; }
     i {
         position: relative;
         top: 5px;
@@ -69,31 +70,21 @@
     }
 }
 #shop .products {
-    display: grid;
     grid-gap: 2rem;
     justify-items: center;
     margin: 3rem;
-    @include break(500px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    @include break(600px) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    @include break(700px) {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
 }
 // footer
 footer {
     background: url(../images/bg-footer.jpg) no-repeat left center;
     background-color: #826453;
     color: #fff;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    #shop & { position: inherit; }
     div {
         display: flex;
         justify-content: space-between;

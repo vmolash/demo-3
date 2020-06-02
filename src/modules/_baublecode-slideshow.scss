@@ -12,32 +12,25 @@
     margin: auto;
     z-index: 4;
 }
-// .slides {
-//     position: relative;
-// }
+@include break(720px) {
+    %slideshow {
+        background-color: #fff;
+        content: "";
+        position: absolute;
+        opacity: 0.5;
+        top: 1.5rem;
+        width: 500px;
+        height: 240px;
+        z-index: -1;
+    }
+}
 .slideshow::after {
-    content: "";
-    position: absolute;
-    opacity: 0.5;
-    top: 1.5rem;
-    // right: 0;
-    // left: 0;
-    width: 500px;
-    height: 240px;
-    z-index: -1;
-    background-color: #fff;
+    @extend %slideshow;
+    left: 0;
 }
 .slideshow::before {
-    content: "";
-    position: absolute;
-    opacity: 0.5;
-    top: 1.5rem;
+    @extend %slideshow;
     right: 0;
-    // left: 0;
-    width: 500px;
-    height: 240px;
-    z-index: -1;
-    background-color: #fff;
 }
 
 /* Next & previous buttons */
