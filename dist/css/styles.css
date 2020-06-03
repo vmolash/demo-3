@@ -191,14 +191,14 @@ p {
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 743px) {
   .gr-third {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 965px) {
   .gr-fourth {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -863,10 +863,6 @@ html {
 
 #shop .brand-subname img {
   margin-right: 27rem;
-}
-
-#shop .products img {
-  width: 210px;
 }
 
 #shop i {

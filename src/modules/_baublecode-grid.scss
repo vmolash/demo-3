@@ -9,13 +9,13 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
-@include  break(640px) {
+@include  break(743px) {
     .gr-third {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
 }
-@include  break(768px) {
+@include  break(965px) {
     .gr-fourth {
         display: grid;
         grid-template-columns: repeat(4, 1fr);

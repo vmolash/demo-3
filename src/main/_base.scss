@@ -1,11 +1,6 @@
 html {
     background-color: #b9a9a9;
 }
-// .wrapper{
-//     display: flex;
-//     grid-template-rows: auto 1fr auto;
-//     min-height: 100vh;
-// }
 %background {
     content: "";
     -webkit-background-size: cover;
@@ -61,13 +56,10 @@ html {
         font-weight: 400;
         font-size: 2.4rem;
     }
-    img {
-        width: 3.2rem;
-    }
+    img { width: 3.2rem; }
 }
 #shop {
     .brand-subname img { margin-right: 27rem; }
-    .products img { width: 210px; }
     i {
         position: relative;
         top: 5px;
