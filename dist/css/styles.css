@@ -17,6 +17,132 @@ button, select, input, option {
 }
 
 html {
+  background-color: #b9a9a9;
+}
+
+#home::after, #shop::after {
+  content: "";
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+@media (min-width: 500px) {
+  #home::after {
+    background: url(../images/bg-home.jpg) no-repeat center center fixed;
+  }
+}
+
+@media (min-width: 800px) {
+  #shop::after {
+    background: url(../images/bg-shop.jpg) no-repeat center top fixed;
+  }
+}
+
+.nav-active {
+  color: #dadcc6;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.brand-name {
+  background: url(../images/bg-brand.jpg) no-repeat right center;
+  height: 100%;
+  margin-top: 3rem;
+}
+
+.brand-name h1 {
+  background: -webkit-linear-gradient(#eab582, #161906);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Patua One', cursive;
+  font-weight: 100;
+  font-size: 3.5rem;
+  margin-right: 6rem;
+  padding: 2rem;
+  letter-spacing: 7px;
+}
+
+.brand-subname {
+  margin: -6rem 3.75rem 3rem 0;
+}
+
+.brand-subname span {
+  color: #fefffa;
+  font-weight: 400;
+  font-size: 2.4rem;
+}
+
+.brand-subname img {
+  width: 3.2rem;
+}
+
+#shop .brand-subname img {
+  margin-right: 27rem;
+}
+
+#shop i {
+  position: relative;
+  top: 5px;
+  right: 20px;
+}
+
+#shop .products {
+  grid-gap: 2rem;
+  justify-items: center;
+  margin: 3rem;
+}
+
+footer {
+  background: url(../images/bg-footer.jpg) no-repeat left center;
+  background-color: #826453;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+#shop footer {
+  position: inherit;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer p {
+  display: flex;
+  align-items: flex-end;
+  font-size: 2rem;
+  padding: 0;
+}
+
+footer .icon {
+  background-color: #af9c91;
+  padding: 0 .5rem;
+}
+
+footer .icon img {
+  position: relative;
+  top: 4px;
+  width: 25px;
+}
+
+html {
   font-size: 10px;
 }
 
@@ -787,130 +913,4 @@ input, select, textarea {
   .prev, .next, .text {
     font-size: 11px;
   }
-}
-
-html {
-  background-color: #b9a9a9;
-}
-
-#home::after, #shop::after {
-  content: "";
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-}
-
-@media (min-width: 500px) {
-  #home::after {
-    background: url(../images/bg-home.jpg) no-repeat center center fixed;
-  }
-}
-
-@media (min-width: 800px) {
-  #shop::after {
-    background: url(../images/bg-shop.jpg) no-repeat center top fixed;
-  }
-}
-
-.nav-active {
-  color: #dadcc6;
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.brand-name {
-  background: url(../images/bg-brand.jpg) no-repeat right center;
-  height: 100%;
-  margin-top: 3rem;
-}
-
-.brand-name h1 {
-  background: -webkit-linear-gradient(#eab582, #161906);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: 'Patua One', cursive;
-  font-weight: 100;
-  font-size: 3.5rem;
-  margin-right: 6rem;
-  padding: 2rem;
-  letter-spacing: 7px;
-}
-
-.brand-subname {
-  margin: -6rem 3.75rem 3rem 0;
-}
-
-.brand-subname span {
-  color: #fefffa;
-  font-weight: 400;
-  font-size: 2.4rem;
-}
-
-.brand-subname img {
-  width: 3.2rem;
-}
-
-#shop .brand-subname img {
-  margin-right: 27rem;
-}
-
-#shop i {
-  position: relative;
-  top: 5px;
-  right: 20px;
-}
-
-#shop .products {
-  grid-gap: 2rem;
-  justify-items: center;
-  margin: 3rem;
-}
-
-footer {
-  background: url(../images/bg-footer.jpg) no-repeat left center;
-  background-color: #826453;
-  color: #fff;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  overflow: hidden;
-}
-
-#shop footer {
-  position: inherit;
-}
-
-footer div {
-  display: flex;
-  justify-content: space-between;
-}
-
-footer p {
-  display: flex;
-  align-items: flex-end;
-  font-size: 2rem;
-  padding: 0;
-}
-
-footer .icon {
-  background-color: #af9c91;
-  padding: 0 .5rem;
-}
-
-footer .icon img {
-  position: relative;
-  top: 4px;
-  width: 25px;
 }
